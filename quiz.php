@@ -10,25 +10,36 @@
 </head>
 <body>
     <?php
-        $inicio = array('Título', 'Digite seu nome:', $_POST['nome'], 'Jogar', 'Responder', 'Continuar', 'Reiniciar');
+        $nome = '';
+        $inicio = array('Título', 'Digite seu nome:','Jogador:', $nome , 'Jogar', 'Responder', 'Continuar', 'Reiniciar');
         $quiz = array(
-            $q1 = array('1- Quem é a autora que recebeu ao nascer o nome Chaya Pinkhasovna( posteriormente o mudou) teve que fugir para o Brasil devido ao 
-            aumento de antissemitismo em seu país de origem e aos  aos 10 anos compôs sua primeira peça para piano em homenagem a sua mãe.
-             Além de ter se formado em direito na faculdade do Rio de Janeiro e ter trabalhado no ramo jornalístico? ',
-             'Cecília  Meireles(1901-1964) - autora da obra “Romanceiro da Inconfidência”.',
-             'Rachel de Queiroz(1910-2003) - autora da obra “O quinze”.', 
-             'Clarice Lispector(1920-1977) - autora de “Perto do Coração Selvagem”.',
-             'Cora Coralina (1889-1985)- autora de “Todas as Vidas”.', 'Clarice Lispector(1920-1977 )- autora de “Perto do Coração Selvagem”.' );
-            $q2 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q3 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q4 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q5 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q6 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q7 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q8 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q9 = array('r1', 'r2', 'r3', 'r4', 'correta' );
-            $q10 = array('r1', 'r2', 'r3', 'r4', 'correta' );
+            $q1 = array(
+                'Quem é a autora que recebeu ao nascer o nome Chaya Pinkhasovna( posteriormente o mudou) teve que fugir para o Brasil devido ao 
+                aumento de antissemitismo em seu país de origem e aos  aos 10 anos compôs sua primeira peça para piano em homenagem a sua mãe.
+                Além de ter se formado em direito na faculdade do Rio de Janeiro e ter trabalhado no ramo jornalístico? ',
+                'Cecília Meireles(1901-1964) - autora da obra “Romanceiro da Inconfidência”.',
+                'Rachel de Queiroz(1910-2003) - autora da obra “O quinze”.', 
+                'Clarice Lispector(1920-1977) - autora de “Perto do Coração Selvagem”.',
+                'Cora Coralina(1889-1985) - autora de “Todas as Vidas”.', 'Clarice Lispector(1920-1977) - autora de “Perto do Coração Selvagem”.'
+            ),
+            $q2 = array('p2', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q3 = array('p3', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q4 = array('p4', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q5 = array('p5', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q6 = array('p6', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q7 = array('p7', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q8 = array('p8', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q9 = array('p9', 'r1', 'r2', 'r3', 'r4', 'correta' ),
+            $q10 = array('p10', 'r1', 'r2', 'r3', 'r4', 'correta')
         );
+        
+        $pagina = $inicio[1];
+        while ($a = 0 && $a <= count($quiz)) {
+            $a++;
+        }
+        while ($i = 1 && $i <= count($q1)) {
+            $i++;
+        }
 
     ?>
     <form action="quiz.php" method="post">
@@ -41,7 +52,13 @@
             <tr>
                 <td colspan="2">
                     <label for="nome"><?php echo $inicio[1] ?></label>
-                    <input type="text" name="nome" value="<?php  echo $inicio[2]?>">
+                    <input type="text" name="nome" value="<?php  echo $inicio[3]?>">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label><?php echo $quiz[$a][0]?></label>
+                    <input type="radio" name="alternativa" value="<?php echo $quiz[$a][$i]?>">
                 </td>
             </tr>
         </table>
