@@ -22,7 +22,7 @@
             ),
             $q2 = array(
                 'Tendo como romance mais famoso a obra “Ponciá Vicêncio”, essa autora não foi só escritora como também professora e suas  
-                obras são caracterizadas, em maior parte, pelo protagonismo mulheres negras no contexto da temática de discriminação racial.', 
+                obras são caracterizadas, em maior parte, pelo protagonismo mulheres negras no contexto da temática de discriminação racial. <br/> A autora correspondente é:', 
                 'Adélia Prado', 'Conceição Evaristo', 'Maria Firmina dos Reis', 'Carolina Maria de Jesus', 'Conceição Evaristo' ),
             $q3 = array(
                 'Este autor inspirou algumas músicas como “Até o fim”  e “Flor da Idade” do compositor brasileiro Chico Buarque e teve o seu poema denominado 
@@ -57,7 +57,8 @@
                 e criação artística. Cercada por cachorros, morou lá até o fim de sua vida e não parou de produzir.', 
                 'Adélia Prado', 'Ana Miranda', 'Carolina de Jesus', 'Hilda Hilst', 'Hilda Hilst')
         );
-        
+        $nome = '';
+        $botao = '';
     ?>
     <form action="quiz.php" method="post">
         <table>
@@ -74,8 +75,11 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <label><?php ?></label>
-                    <input type="radio" name="alternativa" value="<?php ?>">
+                    <label><?php?></label><br/>
+                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
+                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
+                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
+                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
                 </td>
             </tr>
         </table>
