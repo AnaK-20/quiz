@@ -1,0 +1,32 @@
+body{
+    background-image: url(https://blogdocolecionador.com.br/wp-content/uploads/2020/02/estante-para-livros.jpg);
+}
+table{
+    background-color: #e2ae6b;
+    margin: 0 auto;
+    width: 500px;
+    height: 600px;
+    border-radius: 13px;
+    text-align: center;
+    font-family: Baskerville, Times, Sabon;
+    color: #e2ae6b;
+}
+.botao{
+    width: 120px;
+    background-color: #e2ae6b;
+    color: floralwhite;
+    font-weight: bolder;
+    font-size: 13pt;
+    border-radius: 13px;
+    border-color: #e2ae6b;
+}
+td{
+    border-radius: 13px;
+    border-color: #e2ae6b;
+    border-style: ridge; 
+    border-width: 1px; 
+    background-color: floralwhite;  
+}
+div{
+    
+}

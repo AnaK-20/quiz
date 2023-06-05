@@ -18,8 +18,7 @@
                 'Cecília Meireles(1901-1964) - autora da obra “Romanceiro da Inconfidência”.',
                 'Rachel de Queiroz(1910-2003) - autora da obra “O quinze”.', 
                 'Clarice Lispector(1920-1977) - autora de “Perto do Coração Selvagem”.',
-                'Cora Coralina(1889-1985) - autora de “Todas as Vidas”.', 'Clarice Lispector(1920-1977) - autora de “Perto do Coração Selvagem”.'
-            ),
+                'Cora Coralina(1889-1985) - autora de “Todas as Vidas”.', 'Clarice Lispector(1920-1977) - autora de “Perto do Coração Selvagem”.'),
             $q2 = array(
                 'Tendo como romance mais famoso a obra “Ponciá Vicêncio”, essa autora não foi só escritora como também professora e suas  
                 obras são caracterizadas, em maior parte, pelo protagonismo mulheres negras no contexto da temática de discriminação racial. <br/> A autora correspondente é:', 
@@ -59,18 +58,20 @@
         );
         $nome = '';
         $botao = '';
+
     ?>
     <form action="quiz.php" method="post">
         <table>
             <tr>
                 <td colspan="2">
-                    <?php?>
+                    <h2>Principais Escritores Brasileiros</h2>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <label for="nome"><?php?></label>
+                    <label for="nome">Nome:</label>
                     <input type="text" name="nome" value="<?php  ?>">
+                    <input type="submit" name="enviar" value="Jogar" class="botao">
                 </td>
             </tr>
             <tr>
@@ -82,8 +83,21 @@
                     <input type="radio" name="alternativa" value="<?php ?>"><br/>
                 </td>
             </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="enviar1" value="Responder" class="botao">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="enviar2" value="Continuar" class="botao">
+                </td>
+            </tr>
         </table>
     </form>
     
+        <footer>
+            <div></div>
+        </footer>
 </body>
 </html>
