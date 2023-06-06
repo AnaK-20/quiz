@@ -58,11 +58,12 @@
         );
         $nome = '';
         $botao = '';
-
-    ?>
-    <form action="quiz.php" method="post">
-        <table>
-            <tr>
+        $pontuacao = 0;
+        $pagina = '';
+        function Funcao0(Type $var = null)
+        {
+            echo 
+            '<tr>
                 <td colspan="2">
                     <h2>Principais Escritores Brasileiros</h2>
                 </td>
@@ -73,8 +74,16 @@
                     <input type="text" name="nome" value="<?php  ?>">
                     <input type="submit" name="enviar" value="Jogar" class="botao">
                 </td>
-            </tr>
-            <tr>
+            </tr>';
+            $nome = $_POST['nome'];
+        }
+    ?>
+    <form action="quiz.php" method="post">
+        <table>
+            <?php
+                $pagina = Funcao0();
+                echo $pagina
+            ?>
                 <td colspan="2">
                     <label><?php?></label><br/>
                     <input type="radio" name="alternativa" value="<?php ?>"><br/>
