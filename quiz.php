@@ -60,7 +60,7 @@
         $botao = '';
         $pontuacao = 0;
         $pagina = '';
-        function Funcao0(Type $var = null)
+        function Funcao0($nome)
         {
             echo 
             '<tr>
@@ -71,37 +71,361 @@
             <tr>
                 <td colspan="2">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" value="<?php  ?>">
+                    <input type="text" name="nome" value="'.$nome.'">
                     <input type="submit" name="enviar" value="Jogar" class="botao">
                 </td>
             </tr>';
             $nome = $_POST['nome'];
         }
+        function Funcao1($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[0][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[0][1].'">'.$quiz[0][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[0][2].'">'.$quiz[0][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[0][3].'">'.$quiz[0][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[0][4].'">'.$quiz[0][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao2($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[1][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[1][1].'">'.$quiz[1][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[1][2].'">'.$quiz[1][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[1][3].'">'.$quiz[1][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[1][4].'">'.$quiz[1][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao3($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[2][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[2][1].'">'.$quiz[2][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[2][2].'">'.$quiz[2][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[2][3].'">'.$quiz[2][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[2][4].'">'.$quiz[2][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao4($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[3][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[3][1].'">'.$quiz[3][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[3][2].'">'.$quiz[3][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[3][3].'">'.$quiz[3][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[3][4].'">'.$quiz[3][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao5($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[4][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[4][1].'">'.$quiz[4][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[4][2].'">'.$quiz[4][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[4][3].'">'.$quiz[4][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[4][4].'">'.$quiz[4][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao6($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[5][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[5][1].'">'.$quiz[5][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[5][2].'">'.$quiz[5][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[5][3].'">'.$quiz[5][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[5][4].'">'.$quiz[5][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao7($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[6][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[6][1].'">'.$quiz[6][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[6][2].'">'.$quiz[6][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[6][3].'">'.$quiz[6][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[6][4].'">'.$quiz[6][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao8($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[7][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[7][1].'">'.$quiz[7][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[7][2].'">'.$quiz[7][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[7][3].'">'.$quiz[7][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[7][4].'">'.$quiz[7][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao9($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[8][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[8][1].'">'.$quiz[8][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[8][2].'">'.$quiz[8][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[8][3].'">'.$quiz[8][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[8][4].'">'.$quiz[8][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao10($quiz)
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="nome">Jogador:</label>
+                    <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="alternativa">
+                    <p><label>'. $quiz[9][0].'</label></p><br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[9][1].'">'.$quiz[9][1].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[9][2].'">'.$quiz[9][2].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[9][3].'">'.$quiz[9][3].'<br/>
+                    <input type="radio" name="alternativa" value="'.$quiz[9][4].'">'.$quiz[9][4].'<br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="responder" value="Responder" class="botao">
+                </td>
+            </tr>
+            ';
+        }
+        function Funcao11()
+        {
+            echo 
+            '<tr>
+                <td colspan="2">
+                    <h2>Principais Escritores Brasileiros</h2>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    Mensagem
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                <input type="submit" name="reiniciar" value="Reiniciar Jogo" class="botao">
+                </td>
+            </tr>
+            ';
+        }
     ?>
     <form action="quiz.php" method="post">
         <table>
-            <?php
-                $pagina = Funcao0();
-                echo $pagina
-            ?>
-                <td colspan="2">
-                    <label><?php?></label><br/>
-                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
-                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
-                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
-                    <input type="radio" name="alternativa" value="<?php ?>"><br/>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="enviar1" value="Responder" class="botao">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="enviar2" value="Continuar" class="botao">
-                </td>
-            </tr>
+        <?php
+         echo Funcao2($quiz);
+        ?>
+                
         </table>
     </form>
     

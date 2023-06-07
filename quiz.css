@@ -4,8 +4,8 @@ body{
 table{
     background-color: #e2ae6b;
     margin: 0 auto;
-    width: 500px;
-    height: 600px;
+    width: 600px;
+    height: 700px;
     border-radius: 13px;
     text-align: center;
     font-family: Baskerville, Times, Sabon;
@@ -19,6 +19,7 @@ table{
     font-size: 13pt;
     border-radius: 13px;
     border-color: #e2ae6b;
+    
 }
 td{
     border-radius: 13px;
@@ -27,6 +28,9 @@ td{
     border-width: 1px; 
     background-color: floralwhite;  
 }
-div{
-    
+.alternativa{
+    text-align: left;
+}
+p{
+    text-align: center;
 }
