@@ -428,7 +428,6 @@
          if (empty($_POST["enviar"])) {
             $botao = $_POST["enviar"];
             echo Inicio($nome);
-            
          }
          else if (isset($_POST["enviar"])) {
             $botao = $_POST["enviar"];
@@ -468,7 +467,7 @@
                                     <input type="submit" name="responder" value="Responder" class="botao" disabled>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="mensagem">
                                     <td colspan="2" class="acerto">
                                         Mensagem
                                         <input type="submit" name="continuar" value="Continuar" class="botao">
@@ -511,7 +510,7 @@
                                     <input type="submit" name="responder" value="Responder" class="botao" disabled>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="mensagem">
                                     <td colspan="2" class="erro">
                                         Mensagem. A alternativa correta é: '.$quiz[$i][5].'
                                         <input type="submit" name="continuar" value="Continuar" class="botao">
