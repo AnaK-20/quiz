@@ -10,6 +10,8 @@
 </head>
 <body>
     <?php
+        $a = 0;
+        $i = 0;
         $quiz = array(
             $q1 = array(
                 'Quem é a autora que recebeu ao nascer o nome Chaya Pinkhasovna( posteriormente o mudou) teve que fugir para o Brasil devido ao 
@@ -60,7 +62,7 @@
         $botao = '';
         $pontuacao = 0;
         $pagina = '';
-        function Funcao0($nome)
+        function Inicio($nome)
         {
             echo 
             '<tr>
@@ -77,7 +79,7 @@
             </tr>';
             $nome = $_POST['nome'];
         }
-        function Funcao1($quiz)
+        function Funcao0($quiz, $nome)
         {
             echo 
             '<tr>
@@ -109,7 +111,7 @@
             </tr>
             ';
         }
-        function Funcao2($quiz)
+        function Funcao1($quiz, $nome)
         {
             echo 
             '<tr>
@@ -141,7 +143,7 @@
             </tr>
             ';
         }
-        function Funcao3($quiz)
+        function Funcao2($quiz, $nome)
         {
             echo 
             '<tr>
@@ -173,7 +175,7 @@
             </tr>
             ';
         }
-        function Funcao4($quiz)
+        function Funcao3($quiz, $nome)
         {
             echo 
             '<tr>
@@ -205,7 +207,7 @@
             </tr>
             ';
         }
-        function Funcao5($quiz)
+        function Funcao4($quiz, $nome)
         {
             echo 
             '<tr>
@@ -237,7 +239,7 @@
             </tr>
             ';
         }
-        function Funcao6($quiz)
+        function Funcao5($quiz, $nome)
         {
             echo 
             '<tr>
@@ -269,7 +271,7 @@
             </tr>
             ';
         }
-        function Funcao7($quiz)
+        function Funcao6($quiz, $nome)
         {
             echo 
             '<tr>
@@ -301,7 +303,7 @@
             </tr>
             ';
         }
-        function Funcao8($quiz)
+        function Funcao7($quiz, $nome)
         {
             echo 
             '<tr>
@@ -333,7 +335,7 @@
             </tr>
             ';
         }
-        function Funcao9($quiz)
+        function Funcao8($quiz, $nome)
         {
             echo 
             '<tr>
@@ -365,7 +367,7 @@
             </tr>
             ';
         }
-        function Funcao10($quiz)
+        function Funcao9($quiz, $nome)
         {
             echo 
             '<tr>
@@ -397,7 +399,7 @@
             </tr>
             ';
         }
-        function Funcao11()
+        function Funcao10()
         {
             echo 
             '<tr>
@@ -423,7 +425,118 @@
     <form action="quiz.php" method="post">
         <table>
         <?php
-         echo Funcao2($quiz);
+         if (empty($_POST["enviar"])) {
+            $botao = $_POST["enviar"];
+            echo Inicio($nome);
+            
+         }
+         else if (isset($_POST["enviar"])) {
+            $botao = $_POST["enviar"];
+            while ($a >= 0 && $a <= 10) {
+                if (isset($_POST["nome"])) {
+                    $nome = $_POST["nome"];
+                    while ($i <= 5) {
+                        if ($a < 10) {
+                            if (isset($_POST["Responder"] )&& $_POST["alternativa"] == $quiz[$a][5]) {
+                                $pagina = 'Funcao'.$a.'($quiz, $nome)';
+                                
+                                echo '
+                                <tr>
+                                    <td colspan="2">
+                                        <h2>Principais Escritores Brasileiros</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="nome">Jogador:</label>
+                                        <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="alternativa">
+                                        <p><label>'. $quiz[$a][$i].'</label></p><br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$a][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$a][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$a][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$i][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                    <input type="submit" name="responder" value="Responder" class="botao" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="acerto">
+                                        Mensagem
+                                        <input type="submit" name="continuar" value="Continuar" class="botao">
+                                    </td>
+                                </tr>';
+                                if (isset($_POST["continuar"])) {
+                                    $botao = $_POST["continuar"];
+                                    echo $pagina;
+                                }
+        
+                            } 
+                            elseif (isset($_POST["Responder"]) && $_POST["alternativa"] != $quiz[$a][5]) {
+                                $pagina = 'Funcao'.$a.'($quiz, $nome)';
+                                
+                                echo '
+                                <tr>
+                                    <td colspan="2">
+                                        <h2>Principais Escritores Brasileiros</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="nome">Jogador:</label>
+                                        <input type="text" name="nome" value="'.$nome.'" disabled>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="alternativa">
+                                        <p><label>'. $quiz[$a][$i].'</label></p><br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$a][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$a][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$a][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                        <input type="radio" name="alternativa" value="'.$quiz[$i][$i].'" disabled>'.$quiz[$a][$i].'<br/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                    <input type="submit" name="responder" value="Responder" class="botao" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="erro">
+                                        Mensagem. A alternativa correta é: '.$quiz[$i][5].'
+                                        <input type="submit" name="continuar" value="Continuar" class="botao">
+                                    </td>
+                                </tr>';
+                                if (isset($_POST["continuar"])) {
+                                    $botao = $_POST["continuar"];
+                                    echo $pagina;
+                                }
+                            }
+                            
+                        }
+                        elseif (isset($_POST["continuar"]) && $a == 10) {
+                                $pagina = Funcao10();
+                                echo $pagina;
+                            }
+                        $i++;
+                        
+                    }
+                    
+                }
+            }
+            $a++;
+        }
+         
         ?>
                 
         </table>
