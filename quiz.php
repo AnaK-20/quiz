@@ -12,6 +12,10 @@
     <?php
         $a = 0;
         $i = 0;
+        $nome = '';
+        $botao = '';
+        $pontuacao = 0;
+        $pagina = '';
         $quiz = array(
             $q1 = array(
                 'Quem é a autora que recebeu ao nascer o nome Chaya Pinkhasovna( posteriormente o mudou) teve que fugir para o Brasil devido ao 
@@ -58,11 +62,7 @@
                 e criação artística. Cercada por cachorros, morou lá até o fim de sua vida e não parou de produzir.', 
                 'Adélia Prado', 'Ana Miranda', 'Carolina de Jesus', 'Hilda Hilst', 'Hilda Hilst')
         );
-        $nome = '';
-        $botao = '';
-        $pontuacao = 0;
-        $pagina = '';
-        function Inicio($nome)
+        function Inicio()
         {
             echo 
             '<tr>
@@ -73,11 +73,10 @@
             <tr>
                 <td colspan="2">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" value="'.$nome.'">
+                    <input type="text" name="nome" >
                     <input type="submit" name="enviar" value="Jogar" class="botao">
                 </td>
             </tr>';
-            $nome = $_POST['nome'];
         }
         function Funcao0($quiz, $nome)
         {
@@ -426,8 +425,7 @@
         <table>
         <?php
          if (empty($_POST["enviar"])) {
-            $botao = $_POST["enviar"];
-            echo Inicio($nome);
+            echo Inicio();
          }
          else if (isset($_POST["enviar"])) {
             $botao = $_POST["enviar"];
@@ -540,9 +538,13 @@
                 
         </table>
     </form>
-    
+    <div class="container body-content">
         <footer>
-            <div></div>
+            <div>
+                Ana Karolina - ana.querino@escolar.ifrn.edu.br
+            </div>
         </footer>
+    </div>
+        
 </body>
 </html>

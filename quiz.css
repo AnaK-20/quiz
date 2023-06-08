@@ -45,3 +45,21 @@ p{
 .mensagem{
     background-color: white;
 }
+.body-content {
+    min-height: 100%;
+    margin-bottom: -60px; 
+  }
+  .body-content:after {
+    content: "";
+    display: block;
+  }
+footer{
+    background-color: #e2ae6b;
+    height: 200px;
+    position: relative;
+    bottom: 0;
+    line-height: 200px;
+    color: floralwhite;
+    width: 100%;
+    margin-top: 50px;
+}
