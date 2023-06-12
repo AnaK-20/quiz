@@ -19,6 +19,7 @@ table{
     font-size: 13pt;
     border-radius: 13px;
     border-color: #e2ae6b;
+    line-height: 100%;
     
 }
 td{
@@ -62,4 +63,7 @@ footer{
     color: floralwhite;
     width: 100%;
     margin-top: 50px;
+}
+input{
+    line-height: 200%;
 }
