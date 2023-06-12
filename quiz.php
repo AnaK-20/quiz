@@ -541,7 +541,9 @@
     <div class="container body-content">
         <footer>
             <div>
-                Ana Karolina - ana.querino@escolar.ifrn.edu.br
+            </div>
+            <div>
+                
             </div>
         </footer>
     </div>
