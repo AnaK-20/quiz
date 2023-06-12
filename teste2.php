@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Principais Escritores Brasileiros</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='quiz.css'>
+    <script src='main.js'></script>
 </head>
 <body>
     <?php
@@ -110,9 +113,86 @@
                 'resposta' => 'd'
             )
         );
+        $pontuacao = 0;
+        $questionIndex = isset($_POST['questionIndex']) ? $_POST["questionIndex"] : 0;
+        $questoes = count($quiz);
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST["anwser"])) {
+                $selectedAnswer = strtoupper($_POST['answer']);
+                if ($selectedAnswer === $quiz[$questionIndex]['resposta']) {
+                    $pontuacao++;
+                }
+            }
+        }
+        $questionIndex++;
+
+        if ($questionIndex === $questoes) {?>
+            <table>
+                <tr>
+                    <td colspan="2">
+                    <?php 
+                            echo "<h1>Quiz completo!</h1>";
+                                echo "<p>Questões: $questoes</p>";
+                                echo "<p>Respostas corretas: $pontuacao</p>";
+                                echo "<p>Respostas incorretas " . ($questoes - $pontuacao) . "</p>";
+                                
+                                
+                                ?>
+                    </td>
+                </tr>
+            </table>
+           
+       <?php }
+    
     ?>
-    <form action="teste2.php" method="post">
+    <table>
+    <?php if ($questionIndex === 0 || $questionIndex === $questoes) : ?>
         
-    </form>
+        <tr>
+            <td colspan="2">
+                <h1>Principais Escritores Brasileiros</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form action="teste2.php" method="post">
+                    <input type="hidden" name="questionIndex" value="0">
+                    <input type="submit" name="jogar" value="Jogar" class="botao">
+                </form> 
+            </td>
+        </tr>
+        <?php elseif ($questionIndex < $questoes) : ?>
+            <tr>
+                <td>
+                <h1>Principais Escritores Brasileiros</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h3><?php echo $quiz[$questionIndex]['pergunta']; ?></h3>
+                </td>
+            </tr>
+            
+            <form method="post" action="teste2.php">
+            <input type="hidden" name="questionIndex" value="<?php echo $questionIndex; ?>">
+            <?php foreach ($quiz[$questionIndex]['opcoes'] as $opcao) : ?>
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" name="answer" value="<?php echo substr($opcao, 0, 1); ?>" required> <?php echo substr($opcao, 3); ?><br>
+                        
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="Continuar" class="botao">
+                    </td>
+                </tr>
+            
+        </form>
+        <?php endif; ?>
+    </table>
+    
 </body>
 </html>
