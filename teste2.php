@@ -116,17 +116,30 @@
         $pontuacao = 0;
         $questionIndex = isset($_POST['questionIndex']) ? $_POST["questionIndex"] : 0;
         $questoes = count($quiz);
+        $nome = $_POST["nome"];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST["anwser"])) {
                 $selectedAnswer = strtoupper($_POST['answer']);
                 if ($selectedAnswer === $quiz[$questionIndex]['resposta']) {
                     $pontuacao++;
+                    
                 }
             }
         }
         $questionIndex++;
-         
+         $final = '<tr>
+                                <td colspan="2">
+                                
+                                        <h1>Quiz completo!</h1>
+                                        <p>Questões: '.$questoes .'</p>
+                                        <p>Respostas corretas:'. $pontuacao .'</p>
+                                        <p>Respostas incorretas'. ($questoes - $pontuacao).'</p>
+                                        <input type="submit" name="reiniciar" value="Reiniciar" class="botao">
+                                            
+                                            
+                                </td>
+                            </tr>';
     
     ?>
         
@@ -137,6 +150,12 @@
             <tr>
                 <td>
                 <h1>Principais Escritores Brasileiros</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label>Jogador:</label>
+                    <input type="text" name="nome" value="<?php echo $nome?>" disabled>
                 </td>
             </tr>
             <tr>
@@ -160,7 +179,7 @@
                         <input type="submit" name="submit" value="Continuar" class="botao">
                     </td>
                 </tr>
-                <?php elseif ($questionIndex === 0) : ?>
+                <?php elseif ($questionIndex === 0 || $questionIndex === $questoes) : ?>
         
         <tr>
             <td colspan="2">
@@ -170,6 +189,8 @@
         <tr>
             <td colspan="2">
                 <form action="teste2.php" method="post">
+                    <label>Nome:</label>
+                    <input type="text" name="nome">
                     <input type="hidden" name="questionIndex" value="0">
                     <input type="submit" name="jogar" value="Jogar" class="botao">
                 </form> 
@@ -179,10 +200,9 @@
                 <tr>
                     <td colspan="2">
                      
-                            <h1>Quiz completo!</h1>
-                            <p>Questões: <?php $questoes ?></p>
-                            <p>Respostas corretas: <?php $pontuacao ?></p>
-                            <p>Respostas incorretas <?php ($questoes - $pontuacao) ?></p>
+                        <?php
+                            echo $final;
+                        ?>
                                 
                                 
                     </td>
