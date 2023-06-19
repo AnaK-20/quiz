@@ -46,7 +46,6 @@
         }
     }
         $msg = '';
-        $score= 0;
         $questions = array(
              array(
                 'question'=>'Quem é a autora que recebeu ao nascer o nome Chaya Pinkhasovna( posteriormente o mudou) teve que fugir para o Brasil devido ao 
@@ -239,7 +238,7 @@
                         <tr>
                             <td colspan="2">
                                 <p>Jogador: <?php echo $_SESSION['player_name']; ?></p> <!-- Adiciona o nome do jogador -->
-                                <p>Pontuação: <?php echo $score; ?> pontos</p>
+                                <p>Valor da pergunta: <?php echo $points; ?> pontos</p>
                             </td>
                         </tr>
                         <tr>
