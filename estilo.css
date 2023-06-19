@@ -33,7 +33,7 @@ td{
     background-color: rgba(79, 187, 79, 0.39);
     color: rgb(2, 59, 2);
     height: 50pt;
-    margin: 0 auto;
+    padding-top: 50px;
 }
 .erro{
     background-color: rgba(255, 0, 0, 0.315);
