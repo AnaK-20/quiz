@@ -45,7 +45,7 @@
             exit(); // Encerra o script até que o nome seja registrado
         }
     }
-    
+        $msg = '';
         $questions = array(
              array(
                 'question'=>'Quem é a autora que recebeu ao nascer o nome Chaya Pinkhasovna( posteriormente o mudou) teve que fugir para o Brasil devido ao 
