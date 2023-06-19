@@ -164,19 +164,19 @@
             unset($_SESSION['score']);
             unset($_SESSION['quiz_completed']);
             ?>
-            <h1>Pontuação final</h1>
+            <h1>Pontuação</h1>
             <?php
             if ($score >= 600) {
-                echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . '</p>';
+                echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação  foi: ' . $score . '</p>';
             } else {
-                echo '<p>Que pena, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . '</p>';
-                echo '<p>Tente mais uma vez!</p>';
+                echo '<p>Que pena, ' . $_SESSION['player_name'] . '! Sua pontuação  foi: ' . $score . '</p>';
+                echo '<p>Tente Novamente!</p>';
             }
             ?>
             <div class="container">
                 <div class="area">
                 <form method="POST" action="">
-                    <button type="submit" name="restart">Jogar Novamente</button>
+                    <button type="submit" name="restart">Reiniciar</button>
                 </form>
                 <form method="POST" action="">
                     <button type="submit" name="register_new">Novo Jogador</button>
@@ -238,7 +238,7 @@
                         <tr>
                             <td colspan="2">
                                 <p>Jogador: <?php echo $_SESSION['player_name']; ?></p> <!-- Adiciona o nome do jogador -->
-                                <p>Valor da pergunta: <?php echo $points; ?> pontos</p>
+                                <p>A pergunta vale: <?php echo $points; ?> pontos</p>
                             </td>
                         </tr>
                         <tr>
@@ -291,7 +291,7 @@
             if ($score >= 600) {?>
                  <tr>
                      <td colspan="2">
-                        <?php echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . ' pontos</p>'?>
+                        <?php echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação  foi: ' . $score . ' pontos</p>'?>
                      </td>
                  </tr>   
                 
@@ -299,7 +299,7 @@
                 <tr>
                     <td colspan="2">
                         <?php
-                        echo '<p>Que pena, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . ' pontos</p>';
+                        echo '<p>Que pena, ' . $_SESSION['player_name'] . '! Sua pontuação  foi: ' . $score . ' pontos</p>';
                         echo '<p>Tente mais uma vez!</p>';
                         ?>
                     </td>
@@ -315,7 +315,7 @@
                     <tr>
                         <td colspan="2">
                             <form method="POST" action="quiz.php">
-                                <button class="botao" type="submit" name="restart">Jogar Novamente</button>
+                                <button class="botao" type="submit" name="restart">Reicinciar</button>
                                 <button class="botao" type="submit" name="register_new">Novo Jogador</button>
                             </form>
                         </td>
