@@ -179,7 +179,7 @@
                     <button type="submit" name="restart">Reiniciar</button>
                 </form>
                 <form method="POST" action="">
-                    <button type="submit" name="register_new">Novo Jogador</button>
+                    <button type="submit" name="register_new" class="botao2">Novo Jogador</button>
                 </form>
                 </div>
             </div>
@@ -316,7 +316,7 @@
                         <td colspan="2">
                             <form method="POST" action="quiz.php">
                                 <button class="botao" type="submit" name="restart">Reicinciar</button>
-                                <button class="botao" type="submit" name="register_new">Novo Jogador</button>
+                                <button class="botao2" type="submit" name="register_new">Novo Jogador</button>
                             </form>
                         </td>
                     </tr>

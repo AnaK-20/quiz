@@ -79,3 +79,14 @@ a{
     float: left;
     margin-left: 400px;
 }
+.botao2{
+    width: 200px;
+    background-color: #e2ae6b;
+    color: floralwhite;
+    font-weight: bolder;
+    font-size: 13pt;
+    border-radius: 13px;
+    border-color: #e2ae6b;
+    line-height: 100%;
+    
+}
