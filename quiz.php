@@ -21,7 +21,7 @@
         } else {
             // Se o nome não foi enviado, exibe o formulário de registro
             ?>
-            <form method="POST" action="teste2.php">
+            <form method="POST" action="quiz.php">
                 <table>
                     <tr>
                         <td colspan="2">
@@ -306,7 +306,7 @@
 
                     <tr>
                         <td colspan="2">
-                            <form method="POST" action="teste2.php">
+                            <form method="POST" action="quiz.php">
                                 <button class="botao" type="submit" name="restart">Jogar Novamente</button>
                                 <button class="botao" type="submit" name="register_new">Novo Jogador</button>
                             </form>
