@@ -21,10 +21,25 @@
         } else {
             // Se o nome não foi enviado, exibe o formulário de registro
             ?>
-            <form method="POST" action="">
-                <label for="player_name">Nome do jogador:</label>
-                <input type="text" id="player_name" name="player_name" required>
-                <button type="submit">Registrar</button>
+            <form method="POST" action="teste2.php">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <h3>
+                                <?php echo $quiz_title?>
+                            </h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                           <label for="player_name">Nome do jogador:</label>
+                            <input type="text" id="player_name" name="player_name" required>
+                            <button type="submit">Registrar</button> 
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
             </form>
             <?php
             exit(); // Encerra o script até que o nome seja registrado
@@ -211,27 +226,43 @@
             ?>
             <div class="container">
                 <div class="area">
-                    <h1><?php echo $quiz_title; ?></h1>
-                    <h3>Pergunta <?php echo $current_question + 1; ?></h3>
-                    <h4><?php echo $question; ?></h4>
                     <table>
                         <tr>
-                            <td><p>Valor da pergunta: <?php echo $points; ?> pontos</p></td>
-                            <td><p>Jogador: <?php echo $_SESSION['player_name']; ?></p> <!-- Adiciona o nome do jogador --></td>
+                            <td colspan="2">
+                                <h1><?php echo $quiz_title; ?></h1>
+                            </td>
                         </tr>
-                    </table>
-                    <form method="POST" action="">
-                        <?php foreach ($answers as $key => $answer) { ?>
-                            <table>
-                                <tr>
-                                    <td><input type="radio" id="<?php echo $key; ?>" name="answer" value="<?php echo $key; ?>" required hidden></td>
-                                    <td><label for="<?php echo $key; ?>"><?php echo $answer; ?></label><br><br></td>
-                                </tr>
-                            </table>
+                        <tr>
+                            <td colspan="2">
+                                <p>Jogador: <?php echo $_SESSION['player_name']; ?></p> <!-- Adiciona o nome do jogador -->
+                                <p>Valor da pergunta: <?php echo $points; ?> pontos</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                               <h4><?php echo $question; ?></h4> 
+                            </td>
+                        </tr>
                         
-                        <?php } ?>
-                            <button class="my-button" type="submit">Responder</button>
+                        
+                        <form method="POST" action="">
+                            <?php foreach ($answers as $key => $answer) { ?>
+                                
+                                    <tr>
+                                        <td><input type="radio" id="<?php echo $key; ?>" name="answer" value="<?php echo $key; ?>" required hidden></td>
+                                        <td><label for="<?php echo $key; ?>"><?php echo $answer; ?></label><br><br></td>
+                                    </tr>
+                            
+                            <?php } ?>
+                            <tr>
+                                <td colspan="2">
+                                    <button class="botao" type="submit">Responder</button>
+                                </td>
+                            </tr>
+                                
                     </form>
+                </table>
+                    
                 </div>
             </div>
             <?php
@@ -240,23 +271,47 @@
             $_SESSION['quiz_completed'] = true;
             $score = $_SESSION['score'];
             ?>
-            <h1><?php echo $quiz_title; ?></h1>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h1><?php echo $quiz_title; ?></h1>
+                    </td>
+                </tr>
+            
+            
             <?php
-            if ($score >= 60) {
-                echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . ' pontos</p>';
-            } else {
-                echo '<p>Que pena, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . ' pontos</p>';
-                echo '<p>Tente mais uma vez!</p>';
+            if ($score >= 60) {?>
+                 <tr>
+                     <td colspan="2">
+                        <?php echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . ' pontos</p>'?>
+                     </td>
+                 </tr>   
+                
+            <?php} else {?>
+                <tr>
+                    <td colspan="2">
+                        <?php
+                        echo '<p>Que pena, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . ' pontos</p>';
+                        echo '<p>Tente mais uma vez!</p>';
+                        ?>
+                    </td>
+                </tr>
+                
+            <?php
             }
             ?>
             <div class="container">
                 <div class="area">
-                    <form method="POST" action="">
-                        <button class="my-button" type="submit" name="restart">Jogar Novamente</button>
+                    <table>
+
+                    
+                    <form method="POST" action="teste2.php">
+                        <button class="botao" type="submit" name="restart">Jogar Novamente</button>
                     </form>
-                    <form method="POST" action="">
-                        <button class="my-button" type="submit" name="register_new">Registrar Novo Jogador</button>
+                    <form method="POST" action="teste2.php">
+                        <button class="botao" type="submit" name="register_new">Registrar Novo Jogador</button>
                     </form>
+                </table>
                 </div>
             </div>
             <?php
@@ -273,7 +328,7 @@
             }
         }
         ?>
-        
+        </table>
         
 
 </body>
