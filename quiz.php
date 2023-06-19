@@ -46,6 +46,7 @@
         }
     }
         $msg = '';
+        $score= 0;
         $questions = array(
              array(
                 'question'=>'Quem é a autora que recebeu ao nascer o nome Chaya Pinkhasovna( posteriormente o mudou) teve que fugir para o Brasil devido ao 
@@ -205,7 +206,7 @@
             $current_question = $_SESSION['current_question'];
             $selected_answer = $_POST['answer'];
             if ($questions[$current_question]['correct_answer'] === $selected_answer) {  
-                $_SESSION['score'] += $questions[$current_question]['points'];
+                $score += $questions[$current_question]['points'];
                 $msg = '<p class="acerto">Parabéns! Você acertou a questão</p>';
             }else {
                 $msg = '<p class="erro">Que pena! Você errou a questão</p>';
@@ -238,7 +239,7 @@
                         <tr>
                             <td colspan="2">
                                 <p>Jogador: <?php echo $_SESSION['player_name']; ?></p> <!-- Adiciona o nome do jogador -->
-                                <p>Valor da pergunta: <?php echo $points; ?> pontos</p>
+                                <p>Pontuação: <?php echo $score; ?> pontos</p>
                             </td>
                         </tr>
                         <tr>
