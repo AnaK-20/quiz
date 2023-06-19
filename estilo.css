@@ -32,10 +32,14 @@ td{
 .acerto{
     background-color: rgba(79, 187, 79, 0.39);
     color: rgb(2, 59, 2);
+    height: 50pt;
+    margin: 0 auto;
 }
 .erro{
     background-color: rgba(255, 0, 0, 0.315);
     color: rgb(209, 6, 6);
+    height: 50pt;
+    padding-top: 50px;
 }
 .mensagem{
     background-color: white;
