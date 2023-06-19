@@ -206,6 +206,9 @@
             $selected_answer = $_POST['answer'];
             if ($questions[$current_question]['correct_answer'] === $selected_answer) {  
                 $_SESSION['score'] += $questions[$current_question]['points'];
+                $msg = '<p class="acerto">Parabéns! Você acertou a questão</p>';
+            }else {
+                $msg = '<p class="erro">Que pena! Você errou a questão</p>';
             }
             $_SESSION['current_question']++;
         }
@@ -257,6 +260,11 @@
                             <tr>
                                 <td colspan="2">
                                     <button class="botao" type="submit">Responder</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <?php echo $msg?>
                                 </td>
                             </tr>
                                 
