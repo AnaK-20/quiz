@@ -343,7 +343,7 @@
         <footer>
             <div class="div">
                 <p>Trabalho para a disciplina de Programação para Internet</p>
-                <p>Professor: Eberton Marinho</p>
+                <p>Professor: Éberton Marinho</p>
                 <p>Unidade 1</p>
             </div>
                 
