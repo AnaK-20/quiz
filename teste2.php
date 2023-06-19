@@ -34,7 +34,7 @@
                         <td colspan="2">
                            <label for="player_name">Nome do jogador:</label>
                             <input type="text" id="player_name" name="player_name" required>
-                            <button type="submit">Registrar</button> 
+                            <button type="submit" class="botao">Registrar</button> 
                         </td>
                     </tr>
                     
@@ -53,22 +53,22 @@
                 Além de ter se formado em direito na faculdade do Rio de Janeiro e ter trabalhado no ramo jornalístico? ',
                 'points' => '100',
                 'answers'=> array(
-                'Cecília Meireles(1901-1964) - autora da obra “Romanceiro da Inconfidência”.',
-                'Rachel de Queiroz(1910-2003) - autora da obra “O quinze”.',
-                'Clarice Lispector(1920-1977) - autora de “A Hora da Estrela”.',
-                'Cora Coralina(1889-1985) - autora de “Todas as Vidas”.'), 
-                'correct_answers' => 'Clarice Lispector(1920-1977) - autora de “A Hora da Estrela”.'
+                'a'=>'Cecília Meireles(1901-1964) - autora da obra “Romanceiro da Inconfidência”.',
+                'b'=>'Rachel de Queiroz(1910-2003) - autora da obra “O quinze”.',
+                'c'=>'Clarice Lispector(1920-1977) - autora de “A Hora da Estrela”.',
+                'd'=>'Cora Coralina(1889-1985) - autora de “Todas as Vidas”.'), 
+                'correct_answer' => 'c'
             ),
             array(
                 'question'=>'Tendo como romance mais famoso a obra “Ponciá Vicêncio”, essa autora não foi só escritora como também professora e suas  
                 obras são caracterizadas, em maior parte, pelo protagonismo mulheres negras no contexto da temática de discriminação racial. <br/>',
                 'points' => '100',
                 'answers'=> array(
-                'Adélia Prado',
-                'Conceição Evaristo', 
-                'Maria Firmina dos Reis',
-                'Carolina Maria de Jesus'), 
-                'correct_answers' => 'Conceição Evaristo'
+                'a'=>'Adélia Prado',
+                'b'=>'Conceição Evaristo', 
+                'c'=>'Maria Firmina dos Reis',
+                'd'=>'Carolina Maria de Jesus'), 
+                'correct_answer' => 'b'
             ),
             array(
                 'question'=>'Este autor inspirou algumas músicas como “Até o fim”  e “Flor da Idade” do compositor brasileiro Chico Buarque e teve o seu poema denominado 
@@ -76,87 +76,87 @@
                 sua obra mais importante é  a“ Rosa do Povo”(1945). <br/>',
                 'points' => '100',
                 'answers'=> array(
-                'José de Alencar',
-                'Mário Quintana', 
-                'Jorge Amado',
-                'Carlos Drummond de Andrade'), 
-                'correct_answers' => 'Carlos Drummond de Andrade'
+                'a'=>'José de Alencar',
+                'b'=>'Mário Quintana', 
+                'c'=>'Jorge Amado',
+                'd'=>'Carlos Drummond de Andrade'), 
+                'correct_answer' => 'd'
             ),
             array(
                 'question'=>'Este é o autor brasileiro com mais adaptações para a tv e cinema, seu livro “Cacau” ganhou destaque ao ser apreendido pela polícia política de Getúlio Vargas,
                  a temática dos seus livros percorrem histórias reais da realidade das pessoas daquela época. <br/>',
                  'points' => '100',
                 'answers'=> array(
-                'Mário Quintana',
-                'Jorge Amado', 
-                'Machado de Assis',
-                'Carlos Drummond de Andrade'), 
-                'correct_answers' => 'Jorge Amado'
+                'a'=>'Mário Quintana',
+                'b'=>'Jorge Amado', 
+                'c'=>'Machado de Assis',
+                'd'=>'Carlos Drummond de Andrade'), 
+                'correct_answer' => 'b'
             ),
             array(
                 'question'=>'Esta autora teve seu rosto posto no fundo das notas de 100 Cruzados Novos,como forma de homenagem na época (fato que não permaneceu por muito tempo), 
                 foi a primeira mulher a ter um livro premiado pela academia Brasileira de Letras e sua última obra, denominada “Cânticos” foi publicado após sua morte.',
                 'points'=> '100',
                 'answers'=> array(
-                'Cecília Meireles',
-                'Cora Coralina', 
-                'Rachel de Queiroz',
-                'Hilda Hilst'), 
-                'correct_answers' => 'Cecília Meireles'
+                'a'=>'Cecília Meireles',
+                'b'=>'Cora Coralina', 
+                'c'=>'Rachel de Queiroz',
+                'd'=>'Hilda Hilst'), 
+                'correct_answer' => 'a'
             ),
             array(
                 'question'=>'Este autor escreveu os contos Caçador de camurças, Chronos Kai Anagke (Tempo e Destino, em grego), O mistério de Higmore Hall e Makiné. 
                 Todos foram levados a um concurso da revista O Cruzeiro e saíram vencedores.',
                 'points'=> '100',
                 'answers'=> array(
-                'Mário de Andrade',
-                'José Evaristo', 
-                'Guimarães Rosa',
-                'Ariano Suassuna'), 
-                'correct_answers' => 'Guimarães Rosa'
+                'a'=>'Mário de Andrade',
+                'b'=>'José Evaristo', 
+                'c'=>'Guimarães Rosa',
+                'd'=>'Ariano Suassuna'), 
+                'correct_answer' => 'c'
             ),
             array(
                 'question'=>'Esta autora começou a publicar os seus trabalhos quando tinha 76 anos, trabalhou como doceira enquanto levava a escrita como um hobby paralelo.',
                 'points'=> '100',
                 'answers'=> array(
-                'Rachel de Queiroz',
-                'Cora Coralina', 
-                'Hilda Hilst',
-                'Carolina de Jesus'), 
-                'correct_answers' => 'Cora Coralina'
+                'a'=>'Rachel de Queiroz',
+                'b'=>'Cora Coralina', 
+                'c'=>'Hilda Hilst',
+                'd'=>'Carolina de Jesus'), 
+                'correct_answer' => 'b'
             ),
             array(
                 'question'=>'Este autor foi escolhido por Machado de Assis para ser o Patrono da cadeira número 23 da Academia Brasileira de Letras. 
                 Ingressou no meio político, quando foi eleito como deputado no Ceará.',
                 'points'=> '100',
                 'answers'=> array(
-                'Graciliano Ramos',
-                'Manuel Bandeira', 
-                'Monteiro Lobato',
-                'José de Alencar'), 
-                'correct_answers' => 'José de Alencar'
+                'a'=>'Graciliano Ramos',
+                'b'=>'Manuel Bandeira', 
+                'c'=>'Monteiro Lobato',
+                'd'=>'José de Alencar'), 
+                'correct_answer' => 'd'
             ),
             array(
                 'question'=>'Este autor construiu um santuário ao ar livre. A construção foi feita em São José do Belmonte, no estado de Pernambuco, local onde ocorre a cavalgada 
                 inspirada em seu primeiro romance, Romance d’a pedra do reino. As três primeiras imagens do santuário são Jesus, Nossa Senhora e São José, que é o padroeiro do município.',
                 'points'=> '100',
                 'answers'=> array(
-                'Mário Quintana',
-                'José Evaristo', 
-                'Ariano Suassuna',
-                'Manuel Bandeira'), 
-                'correct_answers' => 'Ariano Suassuna'
+                'a'=>'Mário Quintana',
+                'b'=>'José Evaristo', 
+                'c'=>'Ariano Suassuna',
+                'd'=>'Manuel Bandeira'), 
+                'correct_answer' => 'c'
             ),
             array(
                 'question'=>'Aos 35 anos, esta autora passou a morar numa chácara em Campinas, a Casa do Sol, planejada com cuidado pela autora para ser um espaço de inspiração 
                 e criação artística. Cercada por cachorros, morou lá até o fim de sua vida e não parou de produzir.',
                 'points'=> '100',
                 'answers'=> array(
-                'Adélia Prado',
-                'Ana Miranda', 
-                'Carolina de Jesus',
-                'Hilda Hilst'), 
-                'correct_answers' => 'd'
+                'a'=>'Adélia Prado',
+                'b'=>'Ana Miranda', 
+                'c'=>'Carolina de Jesus',
+                'd'=>'Hilda Hilst'), 
+                'correct_answer' => 'd'
             )
         );
         if (isset($_SESSION['quiz_completed']) && $_SESSION['quiz_completed']) {
@@ -166,7 +166,7 @@
             ?>
             <h1>Pontuação final</h1>
             <?php
-            if ($score >= 6) {
+            if ($score >= 600) {
                 echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . '</p>';
             } else {
                 echo '<p>Que pena, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . '</p>';
@@ -179,7 +179,7 @@
                     <button type="submit" name="restart">Jogar Novamente</button>
                 </form>
                 <form method="POST" action="">
-                    <button type="submit" name="register_new">Registrar Novo Jogador</button>
+                    <button type="submit" name="register_new">Novo Jogador</button>
                 </form>
                 </div>
             </div>
@@ -204,7 +204,7 @@
             // Verifica se a resposta está correta e atualiza a pontuação
             $current_question = $_SESSION['current_question'];
             $selected_answer = $_POST['answer'];
-            if ($questions[$current_question]['correct_answer'] === $selected_answer) {
+            if ($questions[$current_question]['correct_answer'] === $selected_answer) {  
                 $_SESSION['score'] += $questions[$current_question]['points'];
             }
             $_SESSION['current_question']++;
@@ -249,7 +249,7 @@
                             <?php foreach ($answers as $key => $answer) { ?>
                                 
                                     <tr>
-                                        <td><input type="radio" id="<?php echo $key; ?>" name="answer" value="<?php echo $key; ?>" required hidden></td>
+                                        <td><input type="radio" id="<?php echo $key; ?>" name="answer" value="<?php echo $key; ?>" required ></td>
                                         <td><label for="<?php echo $key; ?>"><?php echo $answer; ?></label><br><br></td>
                                     </tr>
                             
@@ -280,14 +280,14 @@
             
             
             <?php
-            if ($score >= 60) {?>
+            if ($score >= 600) {?>
                  <tr>
                      <td colspan="2">
                         <?php echo '<p>Parabéns, ' . $_SESSION['player_name'] . '! Sua pontuação final foi: ' . $score . ' pontos</p>'?>
                      </td>
                  </tr>   
                 
-            <?php} else {?>
+            <?php } else {?>
                 <tr>
                     <td colspan="2">
                         <?php
@@ -302,16 +302,17 @@
             ?>
             <div class="container">
                 <div class="area">
-                    <table>
-
                     
-                    <form method="POST" action="teste2.php">
-                        <button class="botao" type="submit" name="restart">Jogar Novamente</button>
-                    </form>
-                    <form method="POST" action="teste2.php">
-                        <button class="botao" type="submit" name="register_new">Registrar Novo Jogador</button>
-                    </form>
-                </table>
+
+                    <tr>
+                        <td colspan="2">
+                            <form method="POST" action="teste2.php">
+                                <button class="botao" type="submit" name="restart">Jogar Novamente</button>
+                                <button class="botao" type="submit" name="register_new">Novo Jogador</button>
+                            </form>
+                        </td>
+                    </tr>
+                    
                 </div>
             </div>
             <?php

@@ -23,14 +23,11 @@ table{
     
 }
 td{
- 
+    border-radius: 13px;
     background-color: floralwhite;  
 }
 .alternativa{
     text-align: left;
-}
-p{
-    text-align: center;
 }
 .acerto{
     background-color: rgba(79, 187, 79, 0.39);
@@ -56,11 +53,26 @@ footer{
     height: 200px;
     position: relative;
     bottom: 0;
-    line-height: 200px;
+    
     color: floralwhite;
     width: 100%;
     margin-top: 50px;
+    font-style: bolder;
 }
 input{
     line-height: 200%;
+}
+.email{
+    font-style: italic;
+}
+.div{
+    float: left;
+    margin-left: 50px;
+}
+a{
+    color: floralwhite;
+}
+.div2{
+    float: left;
+    margin-left: 400px;
 }
